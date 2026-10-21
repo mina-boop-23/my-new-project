@@ -223,3 +223,119 @@ body {
         max-width: 320px;
     }
 }
+
+.schedule-section {
+    width: 100%;
+    background-color: #ffffff;
+    color: #7f8286;
+    padding: 70px 20px 90px;
+    direction: rtl;
+    position: relative;
+    z-index: 10;
+}
+.schedule-container {
+    max-width: 820px;
+    margin: 0 auto;
+}
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.section-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+.section-desc {
+    font-size: 14px;
+    color: #64748b;
+}
+.schedule-cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.program-card {
+    display: flex;
+    align-items: stretch;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    overflow: hidden;
+    transition: all 0.25s ease;
+}
+.program-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    border-color: #cbd5e1;
+}
+.program-time {
+    width: 140px;
+    flex-shrink: 0;
+    background: #0b1f3a;
+    color: #ffffff;
+    font-size: 13.5px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    letter-spacing: 0.3px;
+}
+.program-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 14px 20px;
+    gap: 6px;
+    text-align: right;
+}
+.program-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+.label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #64748b;
+    flex-shrink: 0;
+}
+.title-bold {
+    font-size: 16px;
+    font-weight: 800;
+    color: #0f172a;
+}
+.speaker-row {
+    margin-top: 2px;
+}
+.speaker-name {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #0284c7;
+}
+.break-card {
+    background: #f8fafc;
+    border-style: dashed;
+}
+.break-card .program-time {
+    background: #475569;
+}
+.break-card .title-bold {
+    color: #03020d;
+}
+@media (max-width: 600px) {
+    .program-card {
+        flex-direction: column;
+    }
+    .program-time {
+        width: 100%;
+        padding: 8px;
+    }
+    .program-desc {
+        padding-right: 0;
+    }
+}
