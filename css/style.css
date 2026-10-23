@@ -48,7 +48,7 @@ body {
 }
 
 .banner-subtitle {
-    color: #253e7d;
+    color: #c2c5ce;
     font-size: 13px;
     font-weight: 600;
 }
@@ -179,7 +179,7 @@ body {
     border-radius: 10px;
     background: rgba(37, 62, 125, 0.12);
     border: 1px solid rgba(37, 62, 125, 0.35);
-    color: #253e7d;
+    color: #ffffff;
     flex-shrink: 0;
 }
 .event-time-card {
@@ -212,7 +212,7 @@ body {
 .organizers-title {
     font-size: 13px;
     font-weight: 500;
-    color: #94a3b8;
+    color: #ffffff;
     letter-spacing: 0.3px;
 }
 .organizers-row {
@@ -461,7 +461,7 @@ body {
     margin: 0;
 }
 .footer-credit a {
-    color: #253e7d;
+    color: #dededf;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.25s ease;
