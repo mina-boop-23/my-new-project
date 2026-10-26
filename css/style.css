@@ -476,6 +476,24 @@ body {
         gap: 10px;
     }
 }
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.footer-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+.footer-link:hover {
+    color: #dededf;
+}
+.footer-separator {
+    color: #475569;
+}
 
 .modal {
     display: none;

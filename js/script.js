@@ -1,15 +1,21 @@
 const modal = document.getElementById('registerModal');
 const openBtn = document.getElementById('openRegisterModal');
+const openBtnBottom = document.getElementById('openRegisterModalBottom');
 const closeBtn = document.getElementById('closeModal');
 const form = document.getElementById('registerForm');
 const successMsg = document.getElementById('successMessage');
 const btnText = document.querySelector('.btn-text');
 const btnLoader = document.querySelector('.btn-loader');
 
-openBtn.addEventListener('click', () => {
+function openModal() {
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
-});
+}
+
+openBtn.addEventListener('click', openModal);
+if (openBtnBottom) {
+    openBtnBottom.addEventListener('click', openModal);
+}
 
 closeBtn.addEventListener('click', () => {
     modal.style.display = 'none';
