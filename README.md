@@ -12,7 +12,7 @@ A clean, responsive single-page landing website developed for the academic semin
 
 ## Requirements
 - A modern web browser (Google Chrome, Mozilla Firefox, Safari, or Microsoft Edge).
-- No external package manager or backend server is required.
+- Python and Django
 
 ## Installation
 
@@ -21,13 +21,27 @@ A clean, responsive single-page landing website developed for the academic semin
    git clone https://github.com/mina-daneshi/regmedsummit.git
    ```
 
-  2. Navigate to the project folder:
-   ```bash
-   cd regmedsummit
-   ```
-   3. Open the project:
-   - Double-click `index.html` to view the website directly in your default browser.
-   
+2. Navigate to the project folder:
+```bash
+cd regmedsummit
+```
+
+3. Install python and the required packages
+```bash
+pip install -r requirements.txt
+```
+
+4. migrate the database:
+```bash
+python manage.py migrate
+```
+
+5. run with Django:
+```bash
+python mange.py runserver
+```
+
+6. open browser and navigate to `http://localhost:8000`   
 
 ## Contributing
 

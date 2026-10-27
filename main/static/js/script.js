@@ -1,4 +1,5 @@
-const modal = document.getElementById('registerModal');
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('registerModal');
 const openBtn = document.getElementById('openRegisterModal');
 const openBtnBottom = document.getElementById('openRegisterModalBottom');
 const closeBtn = document.getElementById('closeModal');
@@ -42,14 +43,14 @@ form.addEventListener('submit', async (e) => {
     btnLoader.style.display = 'inline-flex';
     
     const formData = {
-        fullName: document.getElementById('fullName').value,
+        full_name: document.getElementById('full_name').value,
         field: document.getElementById('field').value,
-        phone: document.getElementById('phone').value,
+        phone_number: document.getElementById('phone_number').value,
         degree: document.getElementById('degree').value
     };
-
+    console.log(formData);
     try {
-        const response = await fetch('http://localhost:8095', {
+        const response = await fetch('/reserve', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -78,3 +79,4 @@ form.addEventListener('submit', async (e) => {
         btnLoader.style.display = 'none';
     }
 });
+})

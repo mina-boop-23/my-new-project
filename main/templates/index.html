@@ -1,350 +1,316 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سمینار تخصصی اهدای عضو</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
-    <link rel="shortcut icon" href="icons/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" />
-    <link rel="manifest" href="icons/site.webmanifest" />
-</head>
-<body>
-    <header class="top-banner">
-        <div class="banner-right">
-            <div class="banner-title">سمینار اهدای عضو، پیوند اعضا و پزشکی بازساختی</div>
-            <div class="banner-subtitle">Organ Donation, Transplantation, and Regenerative Medicine</div>
+{% extends "layout.html" %}
+{% load static %}
+
+{% block script %}
+    <script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="hero-bg">
+    <div class="hero-content">
+        <div class="hero-logo-wrapper">
+            <img src="{% static 'assets/logo.jpg' %}" alt="لوگو" class="hero-logo">
         </div>
-        <button id="openRegisterModal" class="register-btn">
-            <svg class="user-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <line x1="19" y1="8" x2="19" y2="14"></line>
-                <line x1="22" y1="11" x2="16" y2="11"></line>
-            </svg>
-            <span>ارسال مقالات</span>
-        </button>
-    </header>
-    <div class="hero-bg">
-        <div class="hero-content">
-            <div class="hero-logo-wrapper">
-                <img src="assets/logo.jpg" alt="لوگو" class="hero-logo">
+        <h1 class="main-title">اهدای عضو، پیوند اعضا و پزشکی بازساختی؛</h1>
+        <p class="hero-subtitle">چالش‌های نوین، فناوری‌های تحول‌آفرین و افق‌های پیش‌رو</p>
+        <div class="chair-card event-time-card">
+            <div class="chair-info">
+                <span class="chair-role">تاریخ برگزاری: ۲۴ دی</span>
+                <h3 class="chair-name">ساعت ۹:۰۰ الی ۱۶:۰۰</h3>
             </div>
-            <h1 class="main-title">اهدای عضو، پیوند اعضا و پزشکی بازساختی؛</h1>
-            <p class="hero-subtitle">چالش‌های نوین، فناوری‌های تحول‌آفرین و افق‌های پیش‌رو</p>
-            <div class="chair-card event-time-card">
-                <div class="chair-info">
-                    <span class="chair-role">تاریخ برگزاری: ۲۴ دی</span>
-                    <h3 class="chair-name">ساعت ۹:۰۰ الی ۱۶:۰۰</h3>
+            <div class="chair-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+            </div>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="organizers-section">
+            <span class="organizers-title">برگزارکنندگان:</span>
+            <div class="organizers-row">
+                <div class="org-card">
+                    <svg class="org-icon hospital-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 21h18"></path>
+                        <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"></path>
+                        <line x1="9" y1="9" x2="9" y2="9.01"></line>
+                        <line x1="15" y1="9" x2="15" y2="9.01"></line>
+                        <line x1="9" y1="13" x2="9" y2="13.01"></line>
+                        <line x1="15" y1="13" x2="15" y2="13.01"></line>
+                    </svg>
+                    <span>هسته پژوهشی پزشکی بازساختی بیمارستان رازی</span>
                 </div>
+                <div class="org-card">
+                    <svg class="org-icon heart-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    <span>مرکز توسعه تحقیقات بالینی بیمارستان رازی</span>
+                </div>
+            </div>
+        </div>
+
+    </div> 
+</div>
+<section class="chairs-section">
+    <div class="chairs-section-container">
+        <div class="section-header">
+            <h2 class="section-title">دبیران سمینار</h2>
+            <p class="section-desc">معرفی دبیران علمی و اجرایی</p>
+        </div>
+        <div class="chairs-cards-wrapper">
+            <div class="chair-card-large">
                 <div class="chair-icon-box">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
                     </svg>
                 </div>
-            </div>
-            <div class="hero-divider"></div>
-            <div class="organizers-section">
-                <span class="organizers-title">برگزارکنندگان:</span>
-                <div class="organizers-row">
-                    <div class="org-card">
-                        <svg class="org-icon hospital-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 21h18"></path>
-                            <path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"></path>
-                            <line x1="9" y1="9" x2="9" y2="9.01"></line>
-                            <line x1="15" y1="9" x2="15" y2="9.01"></line>
-                            <line x1="9" y1="13" x2="9" y2="13.01"></line>
-                            <line x1="15" y1="13" x2="15" y2="13.01"></line>
-                        </svg>
-                        <span>هسته پژوهشی پزشکی بازساختی بیمارستان رازی</span>
-                    </div>
-                    <div class="org-card">
-                        <svg class="org-icon heart-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                        </svg>
-                        <span>مرکز توسعه تحقیقات بالینی بیمارستان رازی</span>
-                    </div>
+                <div class="chair-info">
+                    <span class="chair-role">دبیر علمی سمینار</span>
+                    <h3 class="chair-name">دکتر سعید انواری</h3>
                 </div>
             </div>
-
-        </div> 
-    </div>
-    <section class="chairs-section">
-        <div class="chairs-section-container">
-            <div class="section-header">
-                <h2 class="section-title">دبیران سمینار</h2>
-                <p class="section-desc">معرفی دبیران علمی و اجرایی</p>
-            </div>
-            <div class="chairs-cards-wrapper">
-                <div class="chair-card-large">
-                    <div class="chair-icon-box">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                        </svg>
-                    </div>
-                    <div class="chair-info">
-                        <span class="chair-role">دبیر علمی سمینار</span>
-                        <h3 class="chair-name">دکتر سعید انواری</h3>
-                    </div>
-                </div>
-                <div class="chair-card-large">
-                    <div class="chair-icon-box">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <div class="chair-info">
-                        <span class="chair-role">دبیر اجرایی سمینار</span>
-                        <h3 class="chair-name">دکتر امیرحسین لاریجانی</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> 
-    <section class="schedule-section">
-        <div class="schedule-container">
-            <div class="section-header">
-                <h2 class="section-title">برنامه زمان‌بندی سمینار</h2>
-                <p class="section-desc">جزئیات زمان‌بندی و سخنرانی ‌ها</p>
-            </div>
-            <div class="schedule-cards-list">
-                <div class="program-card">
-                    <div class="program-time">۰۹:۰۰ - ۰۹:۱۵</div>
-                    <div class="program-body">
-                        <div class="program-row">
-                            <span class="label">عنوان:</span>
-                            <span class="value title-bold">افتتاحیه و خوش‌آمدگویی</span>
-                        </div>
-                        <div class="program-desc">
-                            اهداف و چشم‌انداز سمینار
-                        </div>
-                        <div class="program-row speaker-row">
-                            <span class="label">سخنران:</span>
-                            <span class="value speaker-name">دکتر سعید انواری (دبیر علمی)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="program-card">
-                    <div class="program-time">۰۹:۱۵ - ۰۹:۵۰</div>
-                    <div class="program-body">
-                        <div class="program-row">
-                            <span class="label">عنوان:</span>
-                            <span class="value title-bold">مدیریت همودینامیک در اهدا کننده مرگ مغزی:فراتر از دستورالعمل های استاندارد.</span>
-                        </div>
-                        <div class="program-desc">
-                           مدیریت نوین در نگداری اهداکننده:چالش های فیزیولوژیک.
-                        </div>
-                        <div class="program-row speaker-row">
-                            <span class="label">سخنران:</span>
-                            <span class="value speaker-name">دکتر سیامک ریماز</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="program-card">
-                    <div class="program-time">۰۹:۵۰ - ۱۰:۲۵</div>
-                    <div class="program-body">
-                        <div class="program-row">
-                            <span class="label">عنوان:</span>
-                            <span class="value title-bold">تغییر پارادایم در فرایند رضایت‌گیری:تحلیل موانع و رویکرد های نوین در ایران .</span>
-                        </div>
-                        <div class="program-desc">
-                           مهارت های نرم و استراتژی های ارتباطی در ارتباط با خانواده ها یا افراد مرگ مغزی .
-                        </div>
-                        <div class="program-row speaker-row">
-                            <span class="label">سخنران:</span>
-                            <span class="value speaker-name">دکتر لطیف پناهی</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="program-card">
-                    <div class="program-time">۱۰:۲۵ - ۱۰:۴۰</div>
-                    <div class="program-body">
-                        <div class="program-row">
-                            <span class="label">عنوان:</span>
-                            <span class="value title-bold">پذیرایی و شبکه‌سازی</span>
-                        </div>
-                        <div class="program-desc">
-                            استراحت میان‌برنامه و گفت‌وگوی آزاد
-                        </div>
-                    </div>
-                </div>
-                <div class="program-card">
-                    <div class="program-time">۱۰:۴۰ - ۱۱:۱۵</div>
-                    <div class="program-body">
-                        <div class="program-row">
-                            <span class="label">عنوان:</span>
-                            <span class="value title-bold">افق های نوین در پزشکی بازساختی :آیا به پیوند بیولوژیک نزدیک شده‌ایم؟</span>
-                        </div>
-                        <div class="program-desc">
-                         پزشکی بازساختی (Regenerative medicine) از چاپ زیستی اعضا تا مهندسی بافت
-                        </div>
-                        <div class="program-row speaker-row">
-                            <span class="label">سخنران:</span>
-                            <span class="value speaker-name">دکتر قربانی</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="program-card">
-                    <div class="program-time">۱۱:۱۵ - ۱۱:۵۰</div>
-                    <div class="program-body">
-                        <div class="program-row">
-                            <span class="label">عنوان:</span>
-                            <span class="value title-bold">هوش مصنوعی در پیوند اعضا</span>
-                        </div>
-                        <div class="program-row speaker-row">
-                            <span class="label">سخنران:</span>
-                            <span class="value speaker-name">دکتر [نام مدعو]</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="program-card">
-                    <div class="program-time">۱۱:۵۰ - ۱۲:۲۵</div>
-                    <div class="program-body">
-                        <div class="program-row">
-                            <span class="label">عنوان:</span>
-                            <span class="value title-bold">نوآوری های تکنیکال در هاروست و پیوند کبد:مدیریت عوارض و بهبود بقای گرافت.</span>
-                        </div>
-                        <div class="program-desc">
-                           پیچیدگی های جراحی در هاروست و پیوند کبد :چالش های آناتومیک و عروقی.
-                        </div>
-                        <div class="program-row speaker-row">
-                            <span class="label">سخنران:</span>
-                            <span class="value speaker-name">دکتر امید اکبری</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="program-card">
-                    <div class="program-time">۱۲:۲۵ - ۱۳:۰۰</div>
-                    <div class="program-body">
-                        <div class="program-row">
-                            <span class="label">عنوان:</span>
-                            <span class="value title-bold">پنل بحث و گفتگو (Round Table)</span>
-                        </div>
-                        <div class="program-desc">
-                           حضور اساتید در پنل نهایی بسیار حیاتی است. پیشنهاد می‌کنیم در این بخش کیس‌های چالش‌برانگیز واقعی (مثلاً یک مورد اهداکننده با شرایط خاص پزشکی) را به صورت کوتاه مطرح کنید تا دیدگاه‌های جراح، متخصص بیهوشی و کوردیناتور را هم‌زمان بشنوید.
-                        </div>
-                        <div class="program-row speaker-row">
-                            <span class="label">سخنران:</span>
-                            <span class="value speaker-name">تمام اساتید + پرسش و پاسخ</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="program-card">
-                    <div class="program-time">۱۳:۰۰ - ۱۴:۰۰</div>
-                    <div class="program-body">
-                        <div class="program-row">
-                            <span class="label">عنوان:</span>
-                            <span class="value title-bold">استراحت</span>
-                        </div>
-                        <div class="program-desc">
-                           استراحت
-                        </div>
-                    </div>
-                </div>
-                <div class="program-card">
-                    <div class="program-time">۱۴:۰۰ - ۱۶:۰۰</div>
-                    <div class="program-body">
-                        <div class="program-row">
-                            <span class="label">عنوان:</span>
-                            <span class="value title-bold">اختتامیه</span>
-                        </div>
-                        <div class="program-desc">
-                           اختتامیه
-                        </div>
-                        <div class="program-row speaker-row">
-                            <span class="label">سخنران:</span>
-                            <span class="value speaker-name">به زودی...</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="schedule-register-btn-wrapper">
-                <button id="openRegisterModalBottom" class="register-btn register-btn-large">
-                    <svg class="user-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+            <div class="chair-card-large">
+                <div class="chair-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                         <circle cx="9" cy="7" r="4"></circle>
-                        <line x1="19" y1="8" x2="19" y2="14"></line>
-                        <line x1="22" y1="11" x2="16" y2="11"></line>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                     </svg>
-                    <span>ارسال مقالات</span>
-                </button>
-            </div>
-        </div>
-    </section>
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="author-guide.html" class="footer-link">راهنمای نویسندگان</a>
-                <span class="footer-separator">|</span>
-                <a href="article-template.html" class="footer-link">قالب مقالات</a>
-            </div>
-            <p class="footer-copyright">© ۱۴۰۵ تمامی حقوق محفوظ است</p>
-            <p class="footer-credit">ساخته شده توسط <a href="https://webernal.com" target="_blank" rel="noopener">وبرنال</a></p>
-        </div>
-    </footer>
-    <div id="registerModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" id="closeModal">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-            <h2 class="modal-title">ثبت‌نام در سمینار</h2>
-            <p class="modal-subtitle">لطفاً اطلاعات خود را وارد کنید</p>
-            <form id="registerForm" class="register-form">
-                <div class="form-group">
-                    <label for="fullName">نام و نام خانوادگی <span class="required">*</span></label>
-                    <input type="text" id="fullName" name="fullName" required>
                 </div>
-                <div class="form-group">
-                    <label for="field">رشته <span class="required">*</span></label>
-                    <input type="text" id="field" name="field" required>
+                <div class="chair-info">
+                    <span class="chair-role">دبیر اجرایی سمینار</span>
+                    <h3 class="chair-name">دکتر امیرحسین لاریجانی</h3>
                 </div>
-                <div class="form-group">
-                    <label for="phone">شماره تلفن <span class="required">*</span></label>
-                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{11}" placeholder="09123456789">
-                </div>
-                <div class="form-group">
-                    <label for="degree">درجه علمی (مقطع) <span class="required">*</span></label>
-                    <select id="degree" name="degree" required>
-                        <option value="">انتخاب کنید</option>
-                        <option value="دانشجو">دانشجو</option>
-                        <option value="کارشناسی">کارشناسی</option>
-                        <option value="کارشناسی ارشد">کارشناسی ارشد</option>
-                        <option value="دکتری">دکتری</option>
-                        <option value="دکتری تخصصی">دکتری تخصصی</option>
-                        <option value="فوق تخصص">فوق تخصص</option>
-                    </select>
-                </div>
-                <button type="submit" class="form-submit-btn">
-                    <span class="btn-text">ثبت‌نام</span>
-                    <span class="btn-loader" style="display: none;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="spinner">
-                            <path d="M21 12a9 9 0 1 1-6.219-8.56"></path>
-                        </svg>
-                    </span>
-                </button>
-            </form>
-            <div id="successMessage" class="success-message" style="display: none;">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-                <h3>ثبت‌نام با موفقیت انجام شد!</h3>
-                <p>اطلاعات شما با موفقیت ثبت شد. به زودی با شما تماس خواهیم گرفت.</p>
             </div>
         </div>
     </div>
-    <script src="js/script.js"></script>
-</body>
-</html>
+</section> 
+<section class="schedule-section">
+    <div class="schedule-container">
+        <div class="section-header">
+            <h2 class="section-title">برنامه زمان‌بندی سمینار</h2>
+            <p class="section-desc">جزئیات زمان‌بندی و سخنرانی ‌ها</p>
+        </div>
+        <div class="schedule-cards-list">
+            <div class="program-card">
+                <div class="program-time">۰۹:۰۰ - ۰۹:۱۵</div>
+                <div class="program-body">
+                    <div class="program-row">
+                        <span class="label">عنوان:</span>
+                        <span class="value title-bold">افتتاحیه و خوش‌آمدگویی</span>
+                    </div>
+                    <div class="program-desc">
+                        اهداف و چشم‌انداز سمینار
+                    </div>
+                    <div class="program-row speaker-row">
+                        <span class="label">سخنران:</span>
+                        <span class="value speaker-name">دکتر سعید انواری (دبیر علمی)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="program-card">
+                <div class="program-time">۰۹:۱۵ - ۰۹:۵۰</div>
+                <div class="program-body">
+                    <div class="program-row">
+                        <span class="label">عنوان:</span>
+                        <span class="value title-bold">مدیریت همودینامیک در اهدا کننده مرگ مغزی:فراتر از دستورالعمل های استاندارد.</span>
+                    </div>
+                    <div class="program-desc">
+                        مدیریت نوین در نگداری اهداکننده:چالش های فیزیولوژیک.
+                    </div>
+                    <div class="program-row speaker-row">
+                        <span class="label">سخنران:</span>
+                        <span class="value speaker-name">دکتر سیامک ریماز</span>
+                    </div>
+                </div>
+            </div>
+            <div class="program-card">
+                <div class="program-time">۰۹:۵۰ - ۱۰:۲۵</div>
+                <div class="program-body">
+                    <div class="program-row">
+                        <span class="label">عنوان:</span>
+                        <span class="value title-bold">تغییر پارادایم در فرایند رضایت‌گیری:تحلیل موانع و رویکرد های نوین در ایران .</span>
+                    </div>
+                    <div class="program-desc">
+                        مهارت های نرم و استراتژی های ارتباطی در ارتباط با خانواده ها یا افراد مرگ مغزی .
+                    </div>
+                    <div class="program-row speaker-row">
+                        <span class="label">سخنران:</span>
+                        <span class="value speaker-name">دکتر لطیف پناهی</span>
+                    </div>
+                </div>
+            </div>
+            <div class="program-card">
+                <div class="program-time">۱۰:۲۵ - ۱۰:۴۰</div>
+                <div class="program-body">
+                    <div class="program-row">
+                        <span class="label">عنوان:</span>
+                        <span class="value title-bold">پذیرایی و شبکه‌سازی</span>
+                    </div>
+                    <div class="program-desc">
+                        استراحت میان‌برنامه و گفت‌وگوی آزاد
+                    </div>
+                </div>
+            </div>
+            <div class="program-card">
+                <div class="program-time">۱۰:۴۰ - ۱۱:۱۵</div>
+                <div class="program-body">
+                    <div class="program-row">
+                        <span class="label">عنوان:</span>
+                        <span class="value title-bold">افق های نوین در پزشکی بازساختی :آیا به پیوند بیولوژیک نزدیک شده‌ایم؟</span>
+                    </div>
+                    <div class="program-desc">
+                        پزشکی بازساختی (Regenerative medicine) از چاپ زیستی اعضا تا مهندسی بافت
+                    </div>
+                    <div class="program-row speaker-row">
+                        <span class="label">سخنران:</span>
+                        <span class="value speaker-name">دکتر قربانی</span>
+                    </div>
+                </div>
+            </div>
+            <div class="program-card">
+                <div class="program-time">۱۱:۱۵ - ۱۱:۵۰</div>
+                <div class="program-body">
+                    <div class="program-row">
+                        <span class="label">عنوان:</span>
+                        <span class="value title-bold">هوش مصنوعی در پیوند اعضا</span>
+                    </div>
+                    <div class="program-row speaker-row">
+                        <span class="label">سخنران:</span>
+                        <span class="value speaker-name">دکتر [نام مدعو]</span>
+                    </div>
+                </div>
+            </div>
+            <div class="program-card">
+                <div class="program-time">۱۱:۵۰ - ۱۲:۲۵</div>
+                <div class="program-body">
+                    <div class="program-row">
+                        <span class="label">عنوان:</span>
+                        <span class="value title-bold">نوآوری های تکنیکال در هاروست و پیوند کبد:مدیریت عوارض و بهبود بقای گرافت.</span>
+                    </div>
+                    <div class="program-desc">
+                        پیچیدگی های جراحی در هاروست و پیوند کبد :چالش های آناتومیک و عروقی.
+                    </div>
+                    <div class="program-row speaker-row">
+                        <span class="label">سخنران:</span>
+                        <span class="value speaker-name">دکتر امید اکبری</span>
+                    </div>
+                </div>
+            </div>
+            <div class="program-card">
+                <div class="program-time">۱۲:۲۵ - ۱۳:۰۰</div>
+                <div class="program-body">
+                    <div class="program-row">
+                        <span class="label">عنوان:</span>
+                        <span class="value title-bold">پنل بحث و گفتگو (Round Table)</span>
+                    </div>
+                    <div class="program-desc">
+                        حضور اساتید در پنل نهایی بسیار حیاتی است. پیشنهاد می‌کنیم در این بخش کیس‌های چالش‌برانگیز واقعی (مثلاً یک مورد اهداکننده با شرایط خاص پزشکی) را به صورت کوتاه مطرح کنید تا دیدگاه‌های جراح، متخصص بیهوشی و کوردیناتور را هم‌زمان بشنوید.
+                    </div>
+                    <div class="program-row speaker-row">
+                        <span class="label">سخنران:</span>
+                        <span class="value speaker-name">تمام اساتید + پرسش و پاسخ</span>
+                    </div>
+                </div>
+            </div>
+            <div class="program-card">
+                <div class="program-time">۱۳:۰۰ - ۱۴:۰۰</div>
+                <div class="program-body">
+                    <div class="program-row">
+                        <span class="label">عنوان:</span>
+                        <span class="value title-bold">استراحت</span>
+                    </div>
+                    <div class="program-desc">
+                        استراحت
+                    </div>
+                </div>
+            </div>
+            <div class="program-card">
+                <div class="program-time">۱۴:۰۰ - ۱۶:۰۰</div>
+                <div class="program-body">
+                    <div class="program-row">
+                        <span class="label">عنوان:</span>
+                        <span class="value title-bold">اختتامیه</span>
+                    </div>
+                    <div class="program-desc">
+                        اختتامیه
+                    </div>
+                    <div class="program-row speaker-row">
+                        <span class="label">سخنران:</span>
+                        <span class="value speaker-name">به زودی...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="schedule-register-btn-wrapper">
+            <button id="openRegisterModalBottom" class="register-btn register-btn-large">
+                <svg class="user-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <line x1="19" y1="8" x2="19" y2="14"></line>
+                    <line x1="22" y1="11" x2="16" y2="11"></line>
+                </svg>
+                <span>ارسال مقالات</span>
+            </button>
+        </div>
+    </div>
+</section>
+<div id="registerModal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" id="closeModal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <h2 class="modal-title">ثبت‌نام در سمینار</h2>
+        <p class="modal-subtitle">لطفاً اطلاعات خود را وارد کنید</p>
+        <form id="registerForm" class="register-form">
+            <div class="form-group">
+                <label for="full_name">نام و نام خانوادگی <span class="required">*</span></label>
+                <input type="text" id="full_name" name="full_name" required>
+            </div>
+            <div class="form-group">
+                <label for="field">رشته <span class="required">*</span></label>
+                <input type="text" id="field" name="field" required>
+            </div>
+            <div class="form-group">
+                <label for="phone_number">شماره تلفن <span class="required">*</span></label>
+                <input type="tel" id="phone_number" name="phone_number" required pattern="[0-9]{11}" placeholder="09123456789">
+            </div>
+            <div class="form-group">
+                <label for="degree">درجه علمی (مقطع) <span class="required">*</span></label>
+                <select id="degree" name="degree" required>
+                    <option value="">انتخاب کنید</option>
+                    <option value="دانشجو">دانشجو</option>
+                    <option value="کارشناسی">کارشناسی</option>
+                    <option value="کارشناسی ارشد">کارشناسی ارشد</option>
+                    <option value="دکتری">دکتری</option>
+                    <option value="دکتری تخصصی">دکتری تخصصی</option>
+                    <option value="فوق تخصص">فوق تخصص</option>
+                </select>
+            </div>
+            <button type="submit" class="form-submit-btn">
+                <span class="btn-text">ثبت‌نام</span>
+                <span class="btn-loader" style="display: none;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="spinner">
+                        <path d="M21 12a9 9 0 1 1-6.219-8.56"></path>
+                    </svg>
+                </span>
+            </button>
+        </form>
+        <div id="successMessage" class="success-message" style="display: none;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <h3>ثبت‌نام با موفقیت انجام شد!</h3>
+            <p>اطلاعات شما با موفقیت ثبت شد. به زودی با شما تماس خواهیم گرفت.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
